@@ -37,21 +37,33 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DEFINITION OF VARIABLES
+% DEFINITION OF VARIABLES FOR TITLEPAGE AND FOOTER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Fuer Praesenationen muss nur dieser Abschnitt angepasst werden!!!
+
+\newif\ifgerman
+\germantrue % wenn auskommentiert = englisch
+
+
+% Persoenliche Informationen
 \newcommand{\thisAuthor}{Henry-Norbert Cocos}
 \newcommand{\myMatNr}{12345}
 \newcommand{\thisMatNr}{Matrikelnummer:}
-\newcommand{\thisMatNrEnglish}{matriculation number:}
+\newcommand{\thisMatNrEnglish}{Matriculation Number:}
 \newcommand{\myEmail}{cocos@stud.fra-uas.de}
+
+% Titel der Praesentation und Semesterangabe
 \newcommand{\thisTitle}{Betriebssysteme und Rechnernetze}
 \newcommand{\thisSubtitle}{Vorlage für die Präsentation von Werkstück A}
 \newcommand{\semester}{SoSe 2018}
+\newcommand{\semesterEnglish}{Summer Term 2018}
+
+% Fakultaet und Fachbereich auf deutsch und englisch
 \newcommand{\thisInstitute}{Frankfurt University of Applied Sciences}
 \newcommand{\thisFacultyGerman}{Fachbereich 2 - Informatik und Ingenieurwissenschaft}
 \newcommand{\thisStudyGerman}{Informatik}
-\newcommand{\thisFacultyEnglish}{Faculty for Computer Science and Engineering}
+\newcommand{\thisFacultyEnglish}{Faculty of Computer Science and Engineering}
 \newcommand{\thisStudyEnglish}{Computer Science}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -64,8 +76,8 @@
 
 \renewcommand{\familydefault}{\sfdefault} % setzt den Font auf sans-serif
 
-\setbeamertemplate{footline}{\hspace{5mm} \thisTitle~| \semester~| \thisAuthor~  \hfill
-	\insertframenumber/\inserttotalframenumber}
+\setbeamertemplate{footline}{\hspace{5mm} \thisTitle~| {\ifgerman \semester~ \else \semesterEnglish~ \fi}| \thisAuthor~  \hfill
+	\insertframenumber/\inserttotalframenumber} % Definiert den Footer sowohl auf Deutsch als auch auf Englisch
 
 \setbeamertemplate{bibliography item}[text] % Wegen den Nummern an den Referenzen !!!
 
@@ -93,20 +105,35 @@
 {\thisTitle}
 \subtitle{\thisSubtitle~ -- \semester}
 \author[\thisAuthor] % (optional, for multiple authors)
-{\thisAuthor~\\ \thisMatNr~\myMatNr\\\nolinkurl{\myEmail}}
-
+{	
+	\ifgerman 
+		\thisAuthor~\\ \thisMatNr~\myMatNr~\\{\nolinkurl{\myEmail}} % Deutscher Name 
+	\else 
+		\thisAuthor~\\ \thisMatNrEnglish~\myMatNr~\\{\nolinkurl{\myEmail}} % Englischer Name
+	\fi
+}
+	
 
 \institute[Frankfurt] % (optional)
 {	
-	\thisStudyGerman\\
-	\thisFacultyGerman~\\
-	\textbf{\thisInstitute}	
+	\ifgerman
+		\thisStudyGerman\\
+		\thisFacultyGerman\\
+		\textbf{\thisInstitute}
+	\else
+		\thisStudyEnglish\\
+		\thisFacultyEnglish\\
+		\textbf{\thisInstitute}
+	\fi
+	
+	
 }
+
 
  % (optional)
 \date[\today]{\today}
 \subject{\thisTitle}
-\logo{\includegraphics[height=1cm]{./Figures/frauas}}
+%\logo{\includegraphics[height=1cm]{./Figures/frauas}} % Aus Copyright Gründen auskommentiert!!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
