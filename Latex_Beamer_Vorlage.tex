@@ -35,6 +35,28 @@
 % DECLARATION OF PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITION OF VARIABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thisAuthor}{Henry-Norbert Cocos}
+\newcommand{\myMatNr}{12345}
+\newcommand{\thisMatNr}{Matrikelnummer:}
+\newcommand{\thisMatNrEnglish}{matriculation number:}
+\newcommand{\myEmail}{cocos@stud.fra-uas.de}
+\newcommand{\thisTitle}{Betriebssysteme und Rechnernetze}
+\newcommand{\thisSubtitle}{Vorlage für die Präsentation von Werkstück A}
+\newcommand{\semester}{SoSe 2018}
+\newcommand{\thisInstitute}{Frankfurt University of Applied Sciences}
+\newcommand{\thisFacultyGerman}{Fachbereich 2 - Informatik und Ingenieurwissenschaft}
+\newcommand{\thisStudyGerman}{Informatik}
+\newcommand{\thisFacultyEnglish}{Faculty for Computer Science and Engineering}
+\newcommand{\thisStudyEnglish}{Computer Science}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEFINITION OF HEADLINE AND FOOTLINE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,7 +64,7 @@
 
 \renewcommand{\familydefault}{\sfdefault} % setzt den Font auf sans-serif
 
-\setbeamertemplate{footline}{\hspace{5mm} \inserttitle~| \insertdate~| \insertshortauthor \hfill
+\setbeamertemplate{footline}{\hspace{5mm} \thisTitle~| \semester~| \thisAuthor~  \hfill
 	\insertframenumber/\inserttotalframenumber}
 
 \setbeamertemplate{bibliography item}[text] % Wegen den Nummern an den Referenzen !!!
@@ -68,30 +90,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[Titel] % (optional, only for long titles)
-{Betriebssysteme und Rechnernetze}
-\subtitle{Vorlage für die Präsentation von Werkstück A -- SS2018}
-\author[Henry-Norbert Cocos] % (optional, for multiple authors)
-{Henry-Norbert Cocos\inst{}\\Matrikelnummer: 12345\\\nolinkurl{cocos@stud.fra-uas.de}}
+{\thisTitle}
+\subtitle{\thisSubtitle~ -- \semester}
+\author[\thisAuthor] % (optional, for multiple authors)
+{\thisAuthor~\\ \thisMatNr~\myMatNr\\\nolinkurl{\myEmail}}
 
 
 \institute[Frankfurt] % (optional)
 {	
-	Informatik\\
-	Fachbereich 2 - Informatik und Ingenieurwissenschaft\\
-	\textbf{Frankfurt University of Applied Sciences}	
+	\thisStudyGerman\\
+	\thisFacultyGerman~\\
+	\textbf{\thisInstitute}	
 }
 
  % (optional)
 \date[\today]{\today}
-\subject{Vorlage für die Präsentation von Werkstück A}
-%\logo{\includegraphics[height=1cm]{./Figures/frauas}} % Das ist vorsichtshalber aus Copyright Gründen auskommentiert
+\subject{\thisTitle}
+\logo{\includegraphics[height=1cm]{./Figures/frauas}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \hypersetup{
-	pdftitle    = {Betriebssysteme und Rechnernetze -- Vorlage für die Abgabe von Werkstück A-- SS2018},
-	pdfsubject  = {Betriebssysteme und Rechnernetze},
-	pdfauthor   = {Henry-Norbert Cocos},
+	pdftitle    = {\thisTitle~ -- \thisSubtitle},
+	pdfsubject  = {\thisTitle},
+	pdfauthor   = {\thisAuthor},
 	pdfkeywords = {Vorlage, LaTeX, Beamer, Betriebssysteme und Rechnernetze},
 }
 
@@ -150,6 +172,8 @@
 }
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HIER BEGINNT DAS DOKUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -194,6 +218,7 @@
 		\item Infos zu \LaTeX~\cite{Latex_Project}
 		\item Ein~\LaTeX~Tutorial~\cite{Latex_Tutorial}
 	\end{itemize}
+
 
 \end{frame}	
 
