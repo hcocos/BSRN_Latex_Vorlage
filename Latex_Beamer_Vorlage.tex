@@ -56,8 +56,8 @@
 % Titel der Praesentation und Semesterangabe
 \newcommand{\thisTitle}{Betriebssysteme und Rechnernetze}
 \newcommand{\thisSubtitle}{Vorlage für die Präsentation von Werkstück A}
-\newcommand{\semester}{SoSe 2018}
-\newcommand{\semesterEnglish}{Summer Term 2018}
+\newcommand{\semester}{SoSe~2018}
+\newcommand{\semesterEnglish}{Summer~Term~2018}
 
 % Fakultaet und Fachbereich auf deutsch und englisch
 \newcommand{\thisInstitute}{Frankfurt University of Applied Sciences}
@@ -76,7 +76,7 @@
 
 \renewcommand{\familydefault}{\sfdefault} % setzt den Font auf sans-serif
 
-\setbeamertemplate{footline}{\hspace{5mm} \thisTitle~| {\ifgerman \semester~ \else \semesterEnglish~ \fi}| \thisAuthor~  \hfill
+\setbeamertemplate{footline}{\hspace{5mm} \thisAuthor~| {\ifgerman \semester~ \else \semesterEnglish~ \fi}|~\thisTitle   \hfill
 	\insertframenumber/\inserttotalframenumber} % Definiert den Footer sowohl auf Deutsch als auch auf Englisch
 
 \setbeamertemplate{bibliography item}[text] % Wegen den Nummern an den Referenzen !!!
@@ -103,7 +103,7 @@
 
 \title[Titel] % (optional, only for long titles)
 {\thisTitle}
-\subtitle{\thisSubtitle~ -- \semester}
+\subtitle{\thisSubtitle~ -- \ifgerman \semester \else \semesterEnglish \fi}
 \author[\thisAuthor] % (optional, for multiple authors)
 {	
 	\ifgerman 
@@ -133,7 +133,7 @@
  % (optional)
 \date[\today]{\today}
 \subject{\thisTitle}
-%\logo{\includegraphics[height=1cm]{./Figures/frauas}} % Aus Copyright Gründen auskommentiert!!!
+\logo{\includegraphics[height=1cm]{./Figures/frauas}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
