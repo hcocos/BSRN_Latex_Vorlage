@@ -7,10 +7,11 @@ all:
 	$(BUILDTEX)
 	$(BIBTEX) $(PROJECT)
 	$(BUILDTEX)
-	$(BUILDTEX)
+#	$(BUILDTEX)
 
 clean-all:
-	rm -f *.dvi *.log *.bak *.aux *.bbl *.blg *.idx *.ps *.eps *.pdf *.toc *.out *.xml *.tdo *.upa *.upb *.vrb *.nav *.snm *~
+	rm -f *.dvi *.log *.bak *.aux *.bbl *.blg *.idx *.ps *.eps *.pdf *.toc *.out *.xml *.tdo *.upa *.upb *.vrb *.snm *.nav *~
 
 clean:
-	rm -f *.log *.bak *.aux *.bbl *.blg *.idx *.toc *.out *.xml *.tdo *.upa *.upb *.vrb *.nav *.snm *~
+	rm -f *.log *.bak *.aux *.bbl *.blg *.idx *.toc *.out *.xml *.tdo *.upa *.upb *.vrb *.snm *.nav *~
+
