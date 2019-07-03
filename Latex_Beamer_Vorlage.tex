@@ -19,7 +19,9 @@
 \usepackage[titletoc,title]{appendix}
 \usepackage{fancyvrb}
 \usepackage{refcount}
-\usepackage{subfigure}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{caption}
 
 
 \usepackage{eurosym}   % Eurosymbol: \euro
@@ -56,15 +58,18 @@
 % Titel der Praesentation und Semesterangabe
 \newcommand{\thisTitle}{Betriebssysteme und Rechnernetze}
 \newcommand{\thisSubtitle}{Vorlage für die Präsentation von Werkstück A}
-\newcommand{\semester}{SoSe~2018}
-\newcommand{\semesterEnglish}{Summer~Term~2018}
+\newcommand{\semester}{SoSe~2019}
+\newcommand{\semesterEnglish}{Summer~Term~2019}
 
 % Fakultaet und Fachbereich auf deutsch und englisch
 \newcommand{\thisInstitute}{Frankfurt University of Applied Sciences}
-\newcommand{\thisFacultyGerman}{Fachbereich 2 - Informatik und Ingenieurwissenschaft}
+\newcommand{\thisFacultyGerman}{Fachbereich 2\\ Informatik und Ingenieurwissenschaft}
 \newcommand{\thisStudyGerman}{Informatik}
 \newcommand{\thisFacultyEnglish}{Faculty of Computer Science and Engineering}
 \newcommand{\thisStudyEnglish}{Computer Science}
+
+\newcommand{\source}[1]{\caption*{\tiny Source: {#1}} } % For Image Sources
+\newcommand{\quelle}[1]{\caption*{\tiny Quelle: {#1}} } % Für Bildquellen
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -133,7 +138,12 @@
  % (optional)
 \date[\today]{\today}
 \subject{\thisTitle}
-%\logo{\includegraphics[height=1cm]{./Figures/frauas}} % Aus Copyright Gründen auskommentiert
+
+\newif\ifplacelogo % Abfrage ob Logo auf Folie angezeigt werden soll
+\placelogotrue % set it to true
+\logo{\ifplacelogo\includegraphics[height=1cm]{./Figures/frauas}\fi}
+
+\placelogofalse
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -255,6 +265,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Zitieren in \LaTeX}
 	
+	
 	\LaTeX~eignet sich aufgrund von \verb|BibTeX| um längere Texte zu verfassen!
 	\vspace{12pt}
 	
@@ -305,9 +316,10 @@
 			\flushleft
 			\begin{figure}
 				\centering
-				\includegraphics[width=\columnwidth,height=6cm]{Figures/Pinguin}
-				\caption[Pinguin]{Tux das Linux Maskottchen }
+				\includegraphics[width=\columnwidth,height=5cm]{Figures/Pinguin}
+				\caption[Pinguin]{Tux das Linux Maskottchen}
 				\label{fig:Tux}
+				\quelle{\url{https://de.wikipedia.org/wiki/Tux_(Maskottchen)}}
 			\end{figure}
 		
 		\end{column}
