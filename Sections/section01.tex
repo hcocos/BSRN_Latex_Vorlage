@@ -15,3 +15,182 @@
 Inhalt
 	
 \end{frame}
+
+
+\section{Grundlagen}
+
+\subsection{README}
+
+\begin{frame}[fragile]
+	% [fragile] braucht man, wenn man \verb oder \verbatim auf der Folie verwendet!
+	\frametitle{README}
+	\begin{itemize}
+		\item Das hier ist die Folienvorlage zum Kurs \textbf{Betriebssysteme und Rechnernetze}.
+		\item Diese Vorlage soll den Einstieg erleichtern.
+		\item Wird unter Linux im Verzeichnis mit der Quelldatei (\texttt{.tex}) das Kommando \texttt{make} eingegeben, wird eine PDF- und eine PS-Datei erzeugt. Beide haben den gleichen Inhalt.
+		\item Ein aktuelles \LaTeX\ sollte installiert sein.
+		\item Als Editor kann ein Texteditor (bspw. Kate) oder eine IDE wie bspw. TeXStudio \cite{TeXStudio} verwendet werden.
+		\item Wer unter Windows die Folien machen möchte, dem empfehle ich MiK\TeX\footnote{\texttt{http://www.miktex.org}} \cite{MikTeX} und \TeX nicCenter\footnote{\texttt{http://www.texniccenter.org}} \cite{TexNic}. Hierzu habe ich aber keine Erfahrungswerte.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{\LaTeX Beamer}
+	\begin{itemize}
+		\item Diese Vorlage nutzt die \LaTeX-Klasse \texttt{beamer}.
+		\item Eine gute Dokumentation über diese Klasse befindet sich hier:\\
+		\url{http://www2.informatik.hu-berlin.de/~mischulz/beamer.html}
+		\item Diese Quelle ist auch hilfreich:\\
+		\url{http://www.physik.uni-freiburg.de/~tooleh/latex_beamerkurs.pdf}
+		\item Google findet sehr viele hilfreiche Links zum Thema \textbf{LaTeX Beamer}.
+	\end{itemize}
+\end{frame}
+
+\section{Textformatierung}
+
+\subsection{Schriften und Sonderzeichen}
+
+\begin{frame}[fragile]
+	\frametitle{Schriften und Sonderzeichen}
+	\begin{itemize}
+		\item Es gibt verschiedene Schriftsätze: \textbf{Bild Face}, \textrm{Roman}, \textit{Italic}, \texttt{Typewriter}, \textsf{Sans Serif}, \textsl{Slanted}, \textsc{Small Caps}.
+		\item \textcolor{blue}{Farben} sollte man \textcolor{red}{nicht} zu viel einsetzen.
+		\item Ein paar Sonderzeichen: \textbackslash, \$, \&, \euro, \%, \#, \textunderscore, \textasciitilde, \textasciicircum, \textbar, \{, \}
+		\item Weitere Sonderzeichen: \copyright, \textregistered, \texttrademark, \S, \P, \pounds, \dag, \ddag, \textbullet
+		\item Fortsetzungspunkte macht das Kommando \verb!\dots!. Ergebnis: \dots
+	\end{itemize}
+\end{frame}
+
+\subsection{Schriftgrößen}
+
+\begin{frame}[fragile]
+	\frametitle{Schriftgrößen}
+	
+	\Huge
+	\verb!\Huge!
+	\normalsize
+	
+	\huge
+	\verb!\huge!
+	\normalsize
+	
+	\LARGE
+	\verb!\LARGE!
+	\normalsize
+	
+	\Large
+	\verb!\Large!
+	\normalsize
+	
+	\large
+	\verb!\large!
+	\normalsize
+	
+	\normalsize
+	\verb!\normalsize!
+	\normalsize
+	
+	\small
+	\verb!\small!
+	\normalsize
+	
+	\footnotesize
+	\verb!\footnotesize!
+	\normalsize
+	
+	\scriptsize
+	\verb!\scriptsize!
+	\normalsize
+	
+	\tiny
+	\verb!\tiny!
+	\normalsize
+\end{frame}
+
+\subsection{Blöcke}
+
+\begin{frame}[t]
+	% [t] legt fest, dass der Text oben auf der Folie platziert wird.
+	\frametitle{Blöcke}
+	\begin{itemize}
+		\item Es gibt verschiedene Arten von Blöcken:
+	\end{itemize}
+	\begin{block}{Blocktitel}
+		Blocktext
+	\end{block}
+	
+	\begin{exampleblock}{Blocktitel}
+		Blocktext
+	\end{exampleblock}
+	
+	\begin{alertblock}{Blocktitel}
+		Blocktext
+	\end{alertblock}
+\end{frame}
+
+\subsection{Bilder}
+
+\begin{frame}
+	% [t] legt fest, dass der Text oben auf der Folie platziert wird.
+	\frametitle{Bilder}
+	\begin{itemize}
+		\item Hier ist ein Bild:
+	\end{itemize}
+	\begin{center}
+		\includegraphics[height=4cm]{Pinguin.pdf}
+		% Die Dateiendung muss man nicht angeben.
+		% Man hätte auch alternativ die Breite mit "width" angeben können.
+	\end{center}
+	\begin{itemize}
+		\item Bilder sollten im Format Encapsulated PostScript (\texttt{.eps}) sein. Dieses Dateiformat kann man mit Gimp und vielen anderen Programmen erzeugen.
+	\end{itemize}
+\end{frame}
+
+\subsection{Tabellen}
+
+\begin{frame}[fragile]
+	\frametitle{Tabellen}
+	\begin{itemize}
+		\item Es gibt mehrere Umgebungen, um Tabellen zu machen. \texttt{tabular} ist nur eine von vielen.
+	\end{itemize}
+	
+	\begin{center}
+		\begin{tabular}{|c|l|c|r|}
+			\hline
+			\textbf{Zeile} & \textbf{Linksbündig} & \textbf{Zentriert} & \textbf{Rechtsbündig} \\
+			\hline\hline
+			1 & Zeile 1 & Zeile 1 & Zeile 1 \\
+			2 & Zeile 2 & Zeile 2 & Zeile 2 \\
+			3 & Zeile 3 & Zeile 3 & Zeile 3 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	\begin{itemize}
+		\item Das geht natürlich auch ohne die Rahmen:
+	\end{itemize}
+	
+	\begin{center}
+		\begin{tabular}{clcr}
+			\textbf{Zeile} & \textbf{Linksbündig} & \textbf{Zentriert} & \textbf{Rechtsbündig} \\
+			1 & Zeile 1 & Zeile 1 & Zeile 1 \\
+			2 & Zeile 2 & Zeile 2 & Zeile 2 \\
+			3 & Zeile 3 & Zeile 3 & Zeile 3 \\
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\subsection{Mehrspaltige Folien}
+
+\begin{frame}
+	\frametitle{Mehrspaltige Folien}
+	\begin{columns}
+		\column{.45\textwidth}
+		Mehrspaltige Folien können einfach mit \texttt{columns} realisiert werden.
+		\column{.45\textwidth}
+		\begin{enumerate}
+			\item Ein Eintrag
+			\item Noch ein Eintrag
+		\end{enumerate}
+	\end{columns}
+\end{frame}
