@@ -3,24 +3,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\section{Beispiel Abschnitt}
-\label{sec:some}
-%\setcounter{subsection}{1}
+\section{Grundlagen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\subsection{README}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FRAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Eine Beispiel Folie}
-	
-Inhalt
-	
-\end{frame}
-
-
-\section{Grundlagen}
-
-\subsection{README}
-
 \begin{frame}[fragile]
 	% [fragile] braucht man, wenn man \verb oder \verbatim auf der Folie verwendet!
 	\frametitle{README}
@@ -29,7 +22,7 @@ Inhalt
 		\item Diese Vorlage soll den Einstieg erleichtern.
 		\item Wird unter Linux im Verzeichnis mit der Quelldatei (\texttt{.tex}) das Kommando \texttt{make} eingegeben, wird eine PDF- und eine PS-Datei erzeugt. Beide haben den gleichen Inhalt.
 		\item Ein aktuelles \LaTeX\ sollte installiert sein.
-		\item Als Editor kann ein Texteditor (bspw. Kate) oder eine IDE wie bspw. TeXStudio \cite{TeXStudio} verwendet werden.
+		\item Zum Editieren kann ein Texteditor (bspw. Kate) oder eine IDE wie bspw. TeXStudio \cite{TeXStudio} verwendet werden.
 		\item Wer unter Windows die Folien machen möchte, dem empfehle ich MiK\TeX\footnote{\texttt{http://www.miktex.org}} \cite{MikTeX} und \TeX nicCenter\footnote{\texttt{http://www.texniccenter.org}} \cite{TexNic}. Hierzu habe ich aber keine Erfahrungswerte.
 	\end{itemize}
 \end{frame}
@@ -46,14 +39,25 @@ Inhalt
 	\end{itemize}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \section{Textformatierung}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \subsection{Schriften und Sonderzeichen}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 	\frametitle{Schriften und Sonderzeichen}
 	\begin{itemize}
-		\item Es gibt verschiedene Schriftsätze: \textbf{Bild Face}, \textrm{Roman}, \textit{Italic}, \texttt{Typewriter}, \textsf{Sans Serif}, \textsl{Slanted}, \textsc{Small Caps}.
+		\item Es gibt verschiedene Schriftsätze: \textbf{Bold Face}, \textrm{Roman}, \textit{Italic}, \texttt{Typewriter}, \textsf{Sans Serif}, \textsl{Slanted}, \textsc{Small Caps}.
 		\item \textcolor{blue}{Farben} sollte man \textcolor{red}{nicht} zu viel einsetzen.
 		\item Ein paar Sonderzeichen: \textbackslash, \$, \&, \euro, \%, \#, \textunderscore, \textasciitilde, \textasciicircum, \textbar, \{, \}
 		\item Weitere Sonderzeichen: \copyright, \textregistered, \texttrademark, \S, \P, \pounds, \dag, \ddag, \textbullet
@@ -61,8 +65,15 @@ Inhalt
 	\end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \subsection{Schriftgrößen}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 	\frametitle{Schriftgrößen}
 	
@@ -90,7 +101,9 @@ Inhalt
 	\verb!\normalsize!
 	\normalsize
 	
-	\small
+	\small%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% FRAME
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\verb!\small!
 	\normalsize
 	
@@ -107,8 +120,16 @@ Inhalt
 	\normalsize
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \subsection{Blöcke}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[t]
 	% [t] legt fest, dass der Text oben auf der Folie platziert wird.
 	\frametitle{Blöcke}
@@ -128,8 +149,16 @@ Inhalt
 	\end{alertblock}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \subsection{Bilder}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	% [t] legt fest, dass der Text oben auf der Folie platziert wird.
 	\frametitle{Bilder}
@@ -146,8 +175,16 @@ Inhalt
 	\end{itemize}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \subsection{Tabellen}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 	\frametitle{Tabellen}
 	\begin{itemize}
@@ -180,8 +217,16 @@ Inhalt
 	\end{center}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \subsection{Mehrspaltige Folien}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Mehrspaltige Folien}
 	\begin{columns}
@@ -193,4 +238,25 @@ Inhalt
 			\item Noch ein Eintrag
 		\end{enumerate}
 	\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUBSECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\subsection{Zitieren und Quellenangaben}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+	\frametitle{Ziteren und Quellenangaben}
+	
+	\begin{itemize}
+		\item Quellen können im Text mit \verb|\cite| gefolgt von einem Schlüssel gefolgt werden
+		\item Beispielsweise produziert das Kommando\\ \verb|\cite{BibliographyLaTeX}|
+		 die Referenz $\rightarrow$ \cite{BibliographyLaTeX}
+		 \item Die Quellen werden in einer separaten \texttt{.bib} Datei angelegt
+	\end{itemize}
+	
 \end{frame}
