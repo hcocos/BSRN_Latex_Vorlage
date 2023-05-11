@@ -1,0 +1,248 @@
+% !TeX spellcheck = en
+
+\documentclass[german]{beamer}
+%\documentclass[aspectratio=169]{beamer}
+\everymath{\displaystyle}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{verbatim}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+%\usepackage{eurosym}   % Euro symbol: \euro
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{textcomp}  % many special symbols
+\usepackage{lmodern}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{svg}
+\captionsetup[figure]{labelformat=empty}
+\usepackage[nodayofweek,level]{datetime}
+\usepackage{subcaption}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{xcolor,colortbl}
+\definecolor{lightblue}{rgb}{0.68, 0.85, 0.9}
+
+\newcommand{\code}[1]{{\fontfamily{txtt}\selectfont#1}} % code-like font
+\newcolumntype{\XL}[1]{>{\hsize=#1\hsize\raggedright\arraybackslash}X}% left aligned tabularx column, which takes as a parameter the width respective to X
+
+\usepackage[binary-units=true, output-decimal-marker={.}]{siunitx} % Required for \SI commands
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+\tikzset{>=latex}
+
+\graphicspath{{./images/}}
+\PassOptionsToPackage{demo}{graphicx}
+\newcommand{\credit}[1]{\par \scriptsize \itshape#1}
+
+\usetheme[fb2]{FrankfurtUniversity}
+
+\defbeamertemplate{subsection page}{mine}[1][]{%
+  \begin{centering}
+    {\usebeamerfont{subsection name}\usebeamercolor[fg]{subsection name}#1}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center,#1]{part title}
+      \usebeamerfont{subsection title}\insertsubsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+
+\setbeamercovered{invisible}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\setbeamertemplate{bibliography item}[text] % Wegen den Nummern an den Referenzen !!!
+
+\newcommand{\myEmail}{cocos@fb2.fra-uas.de}
+\newcommand{\myTitle}{TITLE}
+\newcommand{\mySubtitle}{Subtitle}
+\newcommand{\myAuthorOne}{Henry-Norbert Cocos}
+
+\newcommand{\thisInstitute}{Frankfurt University of Applied Sciences}
+\newcommand{\thisFacultyGerman}{Fachbereich 2 - Informatik und Ingenieurwissenschaft}
+\newcommand{\thisCityGerman}{60318 Frankfurt am Main}
+\newcommand{\thisStudyGerman}{Informatik}
+\newcommand{\thisFacultyEnglish}{Department of Computer Science and Engineering}
+\newcommand{\thisStudyEnglish}{Computer Science}
+\newcommand{\thisCityEnglish}{D-60318 Frankfurt am Main}
+
+
+\newif\ifgerman
+\germantrue % wenn auskommentiert = englisch
+
+\title{\myTitle}
+\subtitle{\footnotesize\mySubtitle}
+\author{\myAuthorOne}
+
+\author{\myAuthorOne}
+
+\institute{
+	\nolinkurl{\myEmail}\\
+
+	\ifgerman
+	\textbf{\thisStudyGerman}\newline
+	\textbf{\thisFacultyGerman}\newline
+	\textbf{\thisInstitute}\newline
+	\textbf{\thisCityGerman}
+	\else
+	\textbf{\thisStudyEnglish}\newline
+	\textbf{\thisFacultyEnglish}\newline
+	\textbf{\thisInstitute}\newline
+	\textbf{\thisCityEnglish}
+	\fi	
+}
+
+
+\date{\today}
+
+% Informationen für PDF-Dokument
+\hypersetup{
+	pdfpagemode={UseOutlines},
+	bookmarksopen=true,
+	bookmarksopenlevel=0,
+	hypertexnames=false,
+	colorlinks=true,% Set to false to disable coloring links
+	citecolor=black,% The color of citations Für PDF=magenta Für Druck=black
+	linkcolor=black,% The color of references to document elements (sections, figures, etc) Für PDF=mdtBlue Für Druck=black
+	urlcolor=black,% The color of hyperlinks (URLs) Für PDF=mdtBlue Für Druck=black
+	pdfstartview={FitV},
+	unicode,
+	breaklinks=true,
+	pdftitle={\myTitle},
+	pdfsubject={\mySubtitle},
+	pdfauthor={\myAuthorOne},
+	pdfkeywords={\myTitle,}
+}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+%\addtocounter{framenumber}{-2}
+
+\begin{frame}{{\ifgerman Inhalt\else Content\fi}}
+	\tableofcontents
+\end{frame}
+
+\AtBeginSection[]
+{
+	\ifgerman
+	\begin{frame}<beamer>{{\ifgerman Inhalt\else Content\fi}}
+		\tableofcontents[currentsection] %,currentsubsection] % only sections are displayed
+	\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ALLE ABSCHNITTE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Sections/section01}		
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABSCHLUSS FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifgerman
+\begin{frame}
+	
+	\begin{center}
+		{\fontsize{30}{40}\selectfont Vielen Dank\\ für Ihre Aufmerksamkeit!}
+	\end{center}
+	%\vspace{12pt}
+	\hfill
+	
+	\centering	
+	\begin{minipage}{0.5\textwidth}
+		\raggedright
+		\textbf{Henry-Norbert Cocos, M.Sc}\\\vfill
+		Frankfurt University of Applied Sciences\\\vfill
+		Raum 1-230\\\vfill
+		\phone~069 1533-2699\\\vfill
+		\Letter~\nolinkurl{cocos@fb2.fra-uas.de}
+		\Mundus~\url{www.henrycocos.de}
+		\begin{figure}[htbp]
+			\raggedright
+			\includegraphics[width=0.25\textwidth]{Cocos_FRAUAS}
+		\end{figure}
+	\end{minipage}%
+	\begin{minipage}{0.45\textwidth}
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.75\textwidth]{/logos/FRA-UAS_Logo}
+		\end{figure}
+		\vspace{40pt}
+	\end{minipage}
+\end{frame}
+
+\else
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+	
+	\begin{center}
+		{\fontsize{30}{40}\selectfont Thank You\\ For Your Attention!}
+	\end{center}
+	%\vspace{12pt}
+	\hfill
+	
+	\centering	
+	\begin{minipage}{0.5\textwidth}
+		\raggedright
+		\textbf{Henry-Norbert Cocos, M.Sc}\\\vfill
+		Frankfurt University of Applied Sciences\\\vfill
+		Room 1-230\\\vfill
+		\phone~+49 69 1533-2699\\\vfill
+		\Letter~\nolinkurl{cocos@fb2.fra-uas.de}
+		\Mundus~\url{www.henrycocos.de}
+		\begin{figure}[htbp]
+			\raggedright
+			\includegraphics[width=0.25\textwidth]{Cocos_FRAUAS}
+		\end{figure}
+	\end{minipage}%
+	\begin{minipage}{0.45\textwidth}
+			\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.75\textwidth]{/logos/FRA-UAS_Logo}
+		\end{figure}
+		\vspace{40pt}
+	\end{minipage}
+	
+\end{frame}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUELLEN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifgerman
+\section{Quellen}
+\label{sec:References}
+
+
+\begin{frame}[plain,allowframebreaks]{Quellen}
+	\small
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEfull,references}
+\end{frame}
+\else
+\section{References}
+\label{sec:References}
+
+
+\begin{frame}[plain,allowframebreaks]{References}
+	\small
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEfull,references}
+\end{frame}
+\fi
+
+\end{document}
