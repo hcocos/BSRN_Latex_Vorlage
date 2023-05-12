@@ -101,9 +101,7 @@
 	\verb!\normalsize!
 	\normalsize
 	
-	\small%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% FRAME
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\small
 	\verb!\small!
 	\normalsize
 	
@@ -165,11 +163,15 @@
 	\begin{itemize}
 		\item Hier ist ein Bild:
 	\end{itemize}
-	\begin{center}
-		\includegraphics[height=4cm]{Pinguin.pdf}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[height=3cm]{Pinguin.pdf}
+		\label{fig:tux}
 		% Die Dateiendung muss man nicht angeben.
 		% Man hätte auch alternativ die Breite mit "width" angeben können.
-	\end{center}
+		\caption[Tux das Linux Maskottchen]{Tux das Linux Maskottchen}
+	\end{figure}		
 	\begin{itemize}
 		\item Bilder sollten im Format Encapsulated PostScript (\texttt{.eps}) sein. Dieses Dateiformat kann man mit Gimp und vielen anderen Programmen erzeugen.
 	\end{itemize}
@@ -258,5 +260,30 @@
 		 die Referenz $\rightarrow$ \cite{BibliographyLaTeX}
 		 \item Die Quellen werden in einer separaten \texttt{.bib} Datei angelegt.
 	\end{itemize}
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+	\frametitle{Ziteren und Quellenangaben}
+	
+	\begin{itemize}
+		\item In \LaTeX~existieren verschiedene Typen von Literatureinträgen\\ (für Fachbücher, Journalbeiträge, Online-Quellen, etc.).
+		\item Literatureinträge in der \texttt{.bib} Datei haben die folgende Form:
+	\end{itemize}
+	
+	\begin{lstlisting}[caption={Literatureintrag in \texttt{.bib} Datei},captionpos=b]
+	@online{BibliographyLaTeX,
+	 title={Bibliography Management LaTeX},
+	 date={\today},
+	 url={https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management}
+	}
+	\end{lstlisting}
+	
+	\begin{exampleblock}{Quellcode in \LaTeX}
+		Das obige Beispiel nutzt das \texttt{lstlisting} Paket für Quellcodeeinbindung in \texttt{beamer} ;-)
+	\end{exampleblock}
 	
 \end{frame}
